@@ -69398,15 +69398,36 @@ const home = props => {
     // };
     // getCompanys();
   }, []);
-  return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement("h2", null, "Polling Blockchain:"), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Table, {
+  return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("h2", {
+    className: "responsive-image center"
+  }, "Create your own Blockchain elections"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("div", {
+    className: "center"
+  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Button, {
+    variant: "primary",
+    size: "lg",
+    onClick: e => {
+      e.preventDefault();
+      window.location.href = '#/newpoll';
+    }
+  }, "Make An Election Now")), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      justifyContent: 'center',
+      alignItems: 'center'
+    }
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: 'https://i.imgur.com/sIfnIPk.png',
+    className: "responsive-image center"
+  })), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("h2", {
+    className: "responsive-image center"
+  }, "Vote for your favorite elections"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Table, {
     variant: "success",
     striped: true,
     bordered: true,
     hover: true,
     size: "sm"
-  }, /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", null, "#"), /*#__PURE__*/_react.default.createElement("th", null, "List Polls"), /*#__PURE__*/_react.default.createElement("th", {
+  }, /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", null, "#"), /*#__PURE__*/_react.default.createElement("th", null, "List Name"), /*#__PURE__*/_react.default.createElement("th", {
     className: "text-center"
-  }, "Go To Polling Station"))), /*#__PURE__*/_react.default.createElement("tbody", null, promptList.map((el, index) => {
+  }, "Go To Election"))), /*#__PURE__*/_react.default.createElement("tbody", null, promptList.map((el, index) => {
     return /*#__PURE__*/_react.default.createElement("tr", {
       key: index
     }, /*#__PURE__*/_react.default.createElement("td", null, index + 1), /*#__PURE__*/_react.default.createElement("td", null, el), /*#__PURE__*/_react.default.createElement("td", {
@@ -69414,7 +69435,7 @@ const home = props => {
     }, " ", /*#__PURE__*/_react.default.createElement(_reactBootstrap.Button, {
       variant: "primary",
       onClick: () => props.changeCandidates(el)
-    }, "Go to Poll")));
+    }, "Go to Vote")));
   }))));
 };
 
@@ -76469,7 +76490,7 @@ function App() {
     bg: "dark",
     variant: "dark"
   }, "  ", /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Brand, {
-    href: "/"
+    href: "#/"
   }, /*#__PURE__*/_react.default.createElement("img", {
     src: _blocklogo.default
   })), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Toggle, {
@@ -76479,7 +76500,7 @@ function App() {
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav, {
     className: "me-auto"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, {
-    href: "/"
+    href: "#/"
   }, "Home"), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, {
     href: "#/newpoll"
   }, "New Poll"), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, {
@@ -76543,7 +76564,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40741" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35929" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
